@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterator
+
 from llm import LLM
 from tts import TTS
 
@@ -13,7 +14,7 @@ while True:
     message_history.append({"role": "user", "content": user_input})
     response = llm.chat_bot(message_history)
     output = ""
-    audio_text=""
+    audio_text = ""
     if isinstance(response, Iterator):
         print("Bot: ", end="", flush=True)
         for chunk in response:

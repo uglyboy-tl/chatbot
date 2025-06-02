@@ -1,6 +1,6 @@
 import requests
 
-from common import minimax_api_key
+from config import minimax_api_key
 
 url = 'https://api.minimax.chat/v1/get_voice'
 headers = {
